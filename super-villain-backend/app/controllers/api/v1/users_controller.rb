@@ -13,8 +13,7 @@ class Api::V1::UsersController < ApplicationController
         # byebug
         @user = User.create(user_params)
         if @user.save
-            # render json: @user.to_json(include: [:username, :email, :alliance])
-            render json: @user.email_and_password
+            render json: { user: @user }
         else     
             render json: {error: "tic tic... Boommmmm"}
         end
