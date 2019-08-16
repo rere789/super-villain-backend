@@ -1,13 +1,13 @@
 class Api::V1::UsersController < ApplicationController
 
     def index
-        render json: User.all
+        users = User.all
+        render json: users
     end
 
     def show
         if @user = User.find_by(id: params[:id])
             render json: @user.to_json(include: [:username, :alliance])
-            # add cards to above
         else
             render json: {error: "Denied"}
         end
