@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_154435) do
   end
 
   create_table "results", force: :cascade do |t|
-    t.string "loses"
+    t.string "losses"
     t.bigint "user_id"
     t.bigint "card_id"
     t.datetime "created_at", null: false

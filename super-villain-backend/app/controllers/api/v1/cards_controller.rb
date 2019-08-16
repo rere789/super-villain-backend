@@ -1,8 +1,27 @@
 class Api::V1::CardsController < ApplicationController
 
     def show
-        @cards = Card.find_by(params[:id])
+        card = Card.find_by(params[:id])
+        card_json = {
+            alliance: Card.alliance,
+            image: Card.image.map do |img|
+                {
+                    url: img.url
+                }
+            end
+            powerstats: Card.powerstats.map do |pwr|
+                {
+                    strength: pwr.strength,
+                    speed: pwr.speed,
+                    durability: pwr.durability,
+                    power: pwr.power,
+                    combat: pwr.combat
+                }
+            end
+        }
     end 
+
+
 
     # def update
     #     @result = Result.find_by(id: params[:id])
