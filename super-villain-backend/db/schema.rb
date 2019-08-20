@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(version: 2019_08_15_154435) do
     t.string "image"
     t.string "strength"
     t.string "speed"
-    t.string "special_move"
-    t.string "bio"
+    t.string "durability"
+    t.string "power"
+    t.string "combat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
