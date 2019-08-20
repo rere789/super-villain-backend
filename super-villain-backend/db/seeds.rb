@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Card.destroy_all
+Result.destroy_all
+
+
 alex = User.create(username: "alex", email: "soocool@gmail.com", alliance: "Villain")
 reina = User.create(username: "reina", email: "butterfly@gmail.com", alliance: "Hero")
 tee = User.create(username: "tee", email: "smart@gmail.com", alliance: "Villan")
@@ -16,14 +21,7 @@ brook = User.create(username: "brook", email: "fast@gmail.com", alliance: "Hero"
 
 batman = Card.create(name: "Batman", strength: "40", speed: "29", alliance: "good", bio: "Gotham's Dark Knight", special_move: "Bat-kick", value: 6, image: "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg")
 superman = Card.create(name: "Superman", strength: "41", speed: "28", alliance: "good", bio:"Super strong man", special_move: "Super Punch!", value: 9, image: "https://www.superherodb.com/pictures2/portraits/10/100/667.jpg")
-# birdman = Card.create(name: "Birdman", strength: "35", speed:"59", durability:"40", power:"35", combat:"66", image: "https://www.superherodb.com/pictures2/portraits/10/100/1506.jpg")
-# ironman = Card.create(name: "Ironman", strength: "85", speed:"58", durability:"85", power:"100", combat:"64", image: "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg")
-# kick_ass = Card.create(name: "Kick-Ass", strength: "10", speed:"23", durability:"35", power:"22", combat:"56", image: "https://www.superherodb.com/pictures2/portraits/10/100/1158.jpg")
-# paul_blart = Card.create(name: "Paul Blart, Mall Cop", strength: "11", speed:"21", durability:"50", power:"7", combat:"5", image: "https://www.superherodb.com/pictures2/portraits/10/100/10479.jpg")
-# harry_potter = Card.create(name: "Harry Potter", strength: "7", speed:"21", durability:"10", power:"100", combat:"50", image: "https://www.superherodb.com/pictures2/portraits/10/100/10878.jpg")
-# luke_skywalker = Card.create(name: "Luke Skywalker", strength: "38", speed:"42", durability:"25", power:"100", combat:"100", image: "https://www.superherodb.com/pictures2/portraits/10/100/10447.jpg")
-# martian_manhunter = Card.create(name: "Martian Manhunter", strength: "95", speed:"92", durability:"100", power:"100", combat:"85", image: "https://www.superherodb.com/pictures2/portraits/10/100/733.jpg")
-# howard_the_duck = Card.create(name: "Howard the Duck", strength: "44", speed:"17", durability:"34", power:"15", combat:"74", image: "https://www.superherodb.com/pictures2/portraits/10/100/82.jpg")
+
 
 
 
@@ -35,18 +33,11 @@ superman = Card.create(name: "Superman", strength: "41", speed: "28", alliance: 
 
 
 
-joker = Card.create(name: "Joker", strength: "40", speed: "29", alliance: "good", bio: "Gotham's Evil Kidder", special_move: "Joke-kick", value: 8, image: "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg")
-penguin = Card.create(name: "Penguin", strength: "41", speed: "28", alliance: "good", bio: "Greasy Bird man", special_move: "Fish Punch!", value: 9, image: "https://www.superherodb.com/pictures2/portraits/10/100/667.jpg")
+joker = Card.create(name: "Joker", strength: "40", speed: "29", alliance: "bad", bio: "Gotham's Evil Kidder", special_move: "Joke-kick", value: 8, image: "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg")
+penguin = Card.create(name: "Penguin", strength: "41", speed: "28", alliance: "bad", bio: "Greasy Bird man", special_move: "Fish Punch!", value: 9, image: "https://www.superherodb.com/pictures2/portraits/10/100/667.jpg")
 
 
-#  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
-#  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
-#  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
-#  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
-#  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
-#  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
-#  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
 
       
-alexLoses = Result.create(losses: "five", card_id: 1, user_id: 1)
-reinaLoses = Result.create(losses: "four", card_id: 2, user_id: 2)
+alexLoses = Result.create(losses: 0, wins: 0, card_id: 1, user_id: 1)
+reinaLoses = Result.create(losses: 0, wins: 0, card_id: 2, user_id: 2)
