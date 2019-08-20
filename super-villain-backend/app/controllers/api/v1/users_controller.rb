@@ -1,13 +1,21 @@
 class Api::V1::UsersController < ApplicationController
 
+    def index
+        users = User.all
+        render json: users
+    end
+
     def show
         if @user = User.find_by(id: params[:id])
             render json: @user.to_json(include: [:username, :alliance])
-            # add cards to above
         else
             render json: {error: "Denied"}
         end
     end 
+
+    def new
+        #
+    end     
 
     def create 
         # byebug
@@ -18,6 +26,10 @@ class Api::V1::UsersController < ApplicationController
             render json: {error: "tic tic... Boommmmm"}
         end
     end 
+
+    def edit
+        #
+    end
 
     def update
         @user = User.find_by(id: params[:id])

@@ -21,15 +21,14 @@ ActiveRecord::Schema.define(version: 2019_08_15_154435) do
     t.string "image"
     t.string "strength"
     t.string "speed"
-    t.string "durability"
-    t.string "power"
-    t.string "combat"
+    t.string "special_move"
+    t.string "bio"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "results", force: :cascade do |t|
-    t.string "loses"
+    t.string "losses"
     t.bigint "user_id"
     t.bigint "card_id"
     t.datetime "created_at", null: false
