@@ -8,6 +8,7 @@ class CreateCards < ActiveRecord::Migration[5.2]
       t.string :speed
       t.string :special_move
       t.string :bio
+      t.integer :value
 
       t.timestamps
     end
