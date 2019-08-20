@@ -34,6 +34,5 @@ class Api::V1::CardsController < ApplicationController
     def result_params
         params.require(:card).permit(:name, :strength, :speed, :durability, :power, :combat, :image)
     end
-end
 
 end
