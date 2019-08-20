@@ -1,16 +1,20 @@
 class Api::V1::CardsController < ApplicationController
 
+    def index
+        cards = Card.all
+        render json: cards
+    end
+
     def show
         card = Card.find_by(params[:id])
         card_json = {
             alliance: Card.alliance,
-            image: Card.image
+            image: Card.image,
             strength: Card.strength,
             speed: Card.speed,
-            bio: Card.bio
-            special_move: Card.special_move
+            bio: Card.bio,
+            special_move: Card.special_move,
             value: Card.value
-            end
         }
     end 
 
@@ -27,6 +31,6 @@ class Api::V1::CardsController < ApplicationController
     def result_params
         params.require(:card).permit(:name, :strength, :speed, :durability, :power, :combat, :image)
     end
-end
+
 
 end
