@@ -6,9 +6,8 @@ class CreateCards < ActiveRecord::Migration[5.2]
       t.string :image
       t.string :strength
       t.string :speed
-      t.string :durability
-      t.string :power
-      t.string :combat
+      t.string :special_move
+      t.string :bio
 
       t.timestamps
     end

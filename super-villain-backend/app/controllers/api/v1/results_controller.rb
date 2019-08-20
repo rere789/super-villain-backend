@@ -25,11 +25,11 @@ class Api::V1::ResultsController < ApplicationController
 
     end
 
-    # def update
-    #     @result = Result.find_by(id: params[:id])
-    #     @result.update(result_params)
-    #     redirect_to result_path(@result.id)
-    # end
+    def update
+        @result = Result.find_by(id: params[:id])
+        @result.update(result_params)
+        redirect_to result_path(@result.id)
+    end
 
     def destroy
         
