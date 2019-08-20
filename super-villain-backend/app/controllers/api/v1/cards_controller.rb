@@ -4,19 +4,12 @@ class Api::V1::CardsController < ApplicationController
         card = Card.find_by(params[:id])
         card_json = {
             alliance: Card.alliance,
-            image: Card.image.map do |img|
-                {
-                    url: img.url
-                }
-            end
-            powerstats: Card.powerstats.map do |pwr|
-                {
-                    strength: pwr.strength,
-                    speed: pwr.speed,
-                    durability: pwr.durability,
-                    power: pwr.power,
-                    combat: pwr.combat
-                }
+            image: Card.image
+            strength: Card.strength,
+            speed: Card.speed,
+            bio: Card.bio
+            special_move: Card.special_move
+            value: Card.value
             end
         }
     end 
