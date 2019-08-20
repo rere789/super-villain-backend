@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2019_08_15_154435) do
     t.string "image"
     t.string "strength"
     t.string "speed"
+
     t.string "special_move"
     t.string "bio"
     t.integer "value"

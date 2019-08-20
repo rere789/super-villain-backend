@@ -1,7 +1,8 @@
 class Api::V1::ResultsController < ApplicationController
 
     def index 
-        render json: Results.all
+        results = Result.all
+        render json: results
     end
 
     def show

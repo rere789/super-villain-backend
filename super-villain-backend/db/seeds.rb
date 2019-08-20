@@ -34,8 +34,11 @@ superman = Card.create(name: "Superman", strength: "41", speed: "28", alliance: 
 
 
 
+
 joker = Card.create(name: "Joker", strength: "40", speed: "29", alliance: "good", bio: "Gotham's Evil Kidder", special_move: "Joke-kick", value: 8, image: "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg")
 penguin = Card.create(name: "Penguin", strength: "41", speed: "28", alliance: "good", bio: "Greasy Bird man", special_move: "Fish Punch!", value: 9, image: "https://www.superherodb.com/pictures2/portraits/10/100/667.jpg")
+
+
 #  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
 #  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
 #  = Card.create(name: , strength: "", speed:" ", durability:" ", power:" ", combat:" ", image: )
