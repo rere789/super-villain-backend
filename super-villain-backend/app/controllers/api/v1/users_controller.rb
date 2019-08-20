@@ -1,5 +1,13 @@
 class Api::V1::UsersController < ApplicationController
 
+    def login
+        if User.find_by(username: params[:username])
+            render json: {user: User.find_by(username: params[:username]), message: "user exists in database"}
+        else
+            render json: {error: 'something went wrong and couldnt find username'}
+        end
+    end
+
     def index
         users = User.all
         render json: users
